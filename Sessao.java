@@ -8,6 +8,9 @@ public class Sessao {
     private int ingressosSessao;
     protected int ingressosComprados;
     protected int ingressosRestantes;
+    private Filme filme;
+    private Sala sala;
+    private Ingresso ingressos[];
 
     public Sessao(Date data, String hora, String estado, int ingresso) {
         this.dataSessao = data;
@@ -65,6 +68,15 @@ public class Sessao {
     public void setIngressosSessao(int ingressosSessao) {
         this.ingressosSessao = ingressosSessao;
     }
+    public void setFilme(Filme filme) {
+        this.filme = filme;
+    }
+    public void setIngressos(Ingresso[] ingressos) {
+        this.ingressos = ingressos;
+    }
+    public void setSala(Sala sala) {
+        this.sala = sala;
+    }
 
     public void exibirSessao() {
         DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT);
@@ -73,6 +85,11 @@ public class Sessao {
         System.out.println("Ingressos total: " + getIngressosSessao());
         System.out.println("Ingressos comprados: " + getIngressosComprados());
         System.out.println("Ingressos restantes: " + getIngressosRestantes());
+        System.out.println(sala.toString());
+        System.out.println(filme.toString());
+        for (int i = 0; i < ingressos.length; i++){
+            ingressos[i].imprimirIngresso();
+        }
     }
 
     public void venderIngressos(int ingressos) {

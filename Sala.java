@@ -33,4 +33,9 @@ public class Sala {
         this.numeroSala = numeroSala;
     }
 
+    @Override
+    public String toString() {
+        return "Numero da sala: " + getNumeroSala();
+    }
+
 }

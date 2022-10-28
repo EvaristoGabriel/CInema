@@ -1,5 +1,5 @@
 public class Producao extends Papel {
-    public String papelProducao;
+    private String papelProducao;
 
     public Producao(String nome, String papel, String prod) {
         super(nome, papel);
@@ -12,5 +12,11 @@ public class Producao extends Papel {
 
     public void setPapelProducao(String papelProducao) {
         this.papelProducao = papelProducao;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + 
+        "\n Papel produção: " + papelProducao; 
     }
 }

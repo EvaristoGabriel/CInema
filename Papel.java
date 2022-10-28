@@ -1,6 +1,6 @@
 public class Papel {
-    public String nomePessoa;
-    public String papel;
+    private String nomePessoa;
+    private String papel;
 
     public Papel(String nomePessoa, String papel) {
         this.nomePessoa = nomePessoa;
@@ -23,4 +23,9 @@ public class Papel {
         this.papel = papel;
     }
 
+    @Override
+    public String toString() {
+        return "Nome Pessoa: " + nomePessoa + 
+        "\n Papel: " + papel;
+    }
 }

@@ -1,5 +1,5 @@
 public class Genero {
-    public String nomeGenero;
+    private String nomeGenero;
 
     public Genero(String nomeGenero) {
         this.nomeGenero = nomeGenero;
@@ -11,5 +11,10 @@ public class Genero {
 
     public void setNomeGenero(String nomeGenero) {
         this.nomeGenero = nomeGenero;
+    }
+
+    @Override
+    public String toString() {
+        return "Genero: " + nomeGenero;
     }
 }

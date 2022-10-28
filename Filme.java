@@ -1,9 +1,13 @@
 public class Filme {
-    public String titulo;
-    public int ano;
-    public String produtora;
-    public String paisOrigem;
-    public String duracao;
+    private String titulo;
+    private int ano;
+    private String produtora;
+    private String paisOrigem;
+    private String duracao;
+    private Ator atores[];
+    private Genero genero;
+    private Direcao diretores[];
+    private Producao produtores[];
 
     public Filme(String titulo, int ano, String produtora, String duracao, String paisOrigem) {
         this.titulo = titulo;
@@ -51,5 +55,32 @@ public class Filme {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+    public void setAtores(Ator[] atores) {
+        this.atores = atores;
+    }
+    public void setDiretores(Direcao[] diretores) {
+        this.diretores = diretores;
+    }
+    public void setGenero(Genero genero) {
+        this.genero = genero;
+    }
+    public void setProdutores(Producao[] produtores) {
+        this.produtores = produtores;
+    }
+
+    @Override
+    public String toString() {
+        return "Titulo: " + titulo +
+        "\nAno: " + ano +  
+        "\nDuração: " + duracao +  
+        "\nPaís de origem: " + paisOrigem +  
+        "\nProdutora: " + produtora + 
+        "\n" + genero.toString() + 
+        "\n" + atores[0].toString() + 
+        "\n" + atores[1].toString() + 
+        "\n" + diretores[0].toString() +
+        "\n" + produtores[0].toString() +
+        "\n" + produtores[1].toString();
     }
 }

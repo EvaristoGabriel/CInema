@@ -1,7 +1,7 @@
 public class Ator extends Papel {
-    public int idade;
-    public char sexo;
-    public String nacionalidade;
+    private int idade;
+    private char sexo;
+    private String nacionalidade;
 
     public Ator(int idade, char sexo, String nacional, String papel, String nome) {
         super(nome, papel);
@@ -32,5 +32,13 @@ public class Ator extends Papel {
 
     public void setSexo(char sexo) {
         this.sexo = sexo;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + 
+        "\n Idade: " + idade + 
+        "\n Nacionalidade: " + nacionalidade + 
+        "\n Sexo: " + sexo;
     }
 }
