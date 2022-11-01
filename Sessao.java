@@ -19,6 +19,7 @@ public class Sessao {
         this.ingressosSessao = ingresso;
         this.ingressosComprados = 0;
         this.ingressosRestantes = ingresso;
+        
     }
 
     public Date getDataSessao() {
